@@ -1,0 +1,183 @@
+/* -------------General style declarations---------------- */
+* {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+html {
+  min-height: 100%;
+}
+
+header, #subheader {
+  color: white;
+  text-shadow: 0.07em 0 brown, 0 0.07em brown, -0.07em 0 brown, 0 -0.07em brown;
+}
+
+main, button, legend {
+  color: white;
+  text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+}
+
+body {
+  box-sizing: border-box;
+  background-image: url("https://i.imgur.com/mQ5eXkW.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+/* -------------Specific HTML style declarations-------------- */
+header {
+  height: 10%;
+}
+
+.imageBoxes {
+  display: block;
+  font-size: 10vh;
+}
+
+.firstSet {
+  float: left;
+}
+
+.secondSet {
+  float: right;
+}
+
+.cell {
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  width: 15vw;
+  height: 15vh;
+  border-bottom: 1px solid white;
+  position: relative;
+  opacity: .8;
+}
+
+.questionMark {
+  position: absolute;
+  margin: 0 auto;
+}
+
+.svg {
+  filter: opacity(0); 
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  border: 3px solid yellowgreen;
+  border-radius: 5%;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  height: 8vh;
+  width: 40%;
+  transition: .5s;
+}
+
+button:hover, button:focus {
+  background-color: green;
+}
+
+#startButton {
+  margin-top: 25vh;
+  font-size: 1.5em;
+}
+
+.restartButton {
+  margin-top: 5vh;
+  border: 3px dashed yellowgreen;
+}
+
+#restartButtonContainer {
+  width: 99%;
+  bottom: 0;
+}
+
+/* ---------------JS inserted HTML style declarations--------- */
+legend {
+  font-size: 2em;
+  margin: 0 auto;
+  padding-top: 10vh;
+}
+
+fieldset {
+  border: none;
+}
+
+label {
+  display: block;
+  font-size: 1.5em;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+label:hover, label:focus {
+  background: linear-gradient(to bottom, yellowgreen 0%, green 100%);
+}
+
+.final-score {
+  font-size: 5em;
+  animation: shake 1s;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.feedback  {
+  font-size: 2.5em;
+  padding-top: 10vh;
+}
+
+/* -----------Platform specific style declarations---------- */
+@media only screen and (max-width: 400px) {
+  #startButton {
+    height: inherit;
+    margin-top: 0;
+  }
+  .submitButton {
+    height: 10vh;
+    width: 100%;
+    margin-bottom: 10vh;
+  }
+  .restartButton {
+    height: inherit;
+    width: inherit;
+  }
+  .feedback {
+    font-size: 1.5em;
+  }
+  .nextButton {
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+  }
+  .firstSet {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    float: none;
+  }
+  .secondSet {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    float: none;
+  }
+}
+
+/* -----------------Misc styles-------------- */
+.hidden {
+  display: none;
+}
